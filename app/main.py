@@ -1,5 +1,4 @@
 from fastapi.middleware.cors import CORSMiddleware
-from django.conf import settings
 from fastapi import FastAPI
 
 from .routers import user
