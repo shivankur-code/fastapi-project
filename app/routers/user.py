@@ -7,7 +7,7 @@ from .. import utils
 
 router = APIRouter(prefix = '/users', tags = ['USERS'])
 
-@router.post('/', status_code= status.HTTP_201_CREATED)
+@router.post('/', status_code= status.HTTP_201_CREATED, response_model= schemas.UserOut)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     # hash the password
     user.password = utils.hash(user.password)
