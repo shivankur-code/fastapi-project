@@ -5,7 +5,7 @@ from app.config import settings
 
 def test_root(client):
     res = client.get("/")
-    assert res.json().get('message') == 'hello world'
+    assert res.json().get('message') == 'hello world SUCCESS CI/CD'
     # print(res.json())
     assert res.status_code == 200
     
