@@ -31,4 +31,4 @@ app.include_router(vote.router)
 
 @app.get('/')
 def rou():
-    return {"message": "hello world"}
+    return {"message": "hello world SUCCESS CI/CD"}
