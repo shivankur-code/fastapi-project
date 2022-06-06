@@ -90,10 +90,10 @@ jobs:
           username: ${{secrets.PROD_USERNAME}}
           password: ${{secrets.PROD_PASSWORD}}
           # port: 22
-          script: whoami
-            # cd app/src
-            # git pull
-            # echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
+          script: |
+            cd app/src
+            git pull
+            echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
       # login to our ubuntu
       # cd /app/src
       # git pull
