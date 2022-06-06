@@ -83,10 +83,10 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-      - name: deploy
+      - name: deploy to ubantu server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.PROD_HOST}}:22
+          host: ${{secrets.PROD_HOST}}
           username: ${{secrets.PROD_USERNAME}}
           password: ${{secrets.PROD_PASSWORD}}
           script: |
