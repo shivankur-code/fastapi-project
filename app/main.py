@@ -29,3 +29,6 @@ app.include_router(vote.router)
 # models.Base.metadata.create_all(bind = engine)
 
 
+@app.get('/')
+def rou():
+    return {"message": "hello world"}
